@@ -1,0 +1,671 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .header {
+            /* background-color: rgba(0, 0, 0, 0.9); */
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            /* backdrop-filter: blur(10px); */
+            flex-direction: row;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul a{
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            background: #e50914;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #fff;
+            margin-right: auto;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #e50914;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 80% 20%, rgba(229, 9, 20, 0.2) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .marvel-logo {
+            color: transparent;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-color: #e50914;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            background-clip: text;
+        }
+
+        .hero h1 {
+            color: transparent;
+            font-size: 4.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg,rgba(0, 85, 255, 1) 0%, rgba(255, 0, 0, 1) 100%);
+            text-shadow: -2px -3px 6px rgba(0, 0, 0, 0.5);
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: #e50914;
+            color: #fff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #b8070f;
+            transform: translateY(-2px);
+        }
+
+        .hero-picture{
+            width: 120%;
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        }
+
+        /* Video Gallery */
+        .video-gallery {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .video-item {
+            width: 13vw;
+            height: 13vh;
+            background: linear-gradient(135deg, #333, #555);
+            border-radius: 6px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .video-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* .video-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(229, 9, 20, 0.3), transparent);
+        } */
+
+        /* .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .play-btn::before {
+            content: '';
+            color: #000;
+            font-size: 12px;
+            margin-left: 2px;
+        } */
+
+        .hero-picture{
+            margin: auto;
+            
+        }
+
+        .video-preview{
+            width: 13vw;
+        }
+
+        /* Character Section */
+        .character-section {
+            padding: 5rem 5%;
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .character-image {
+            width: 350px;
+            height: 470px;
+            background: linear-gradient(145deg, #e50914, #333);
+            
+            border-radius: 10px;
+            position: relative;
+            flex-shrink: 0;
+            overflow:visible;
+        }
+
+        .character-image::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 8rem;
+            opacity: 0.7;
+        }
+
+        .image-preview{
+            position: relative;
+            transform: scale3d(1.5, 1.5, 1.5);
+            
+        }
+
+        .character-info {
+            flex: 1;
+        }
+
+        .about-badge {
+            position: relative;
+            background: #e50914;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            z-index: 1;
+        }
+
+        .about-badge::before {
+            content: '• ';
+        }
+
+        .character-info p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .see-more-btn {
+            position: relative;
+            background: #e50914;
+            color: #fff;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .see-more-btn:hover {
+            background: #b8070f;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .timeline-item {
+            flex: 1;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(229, 9, 20, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-10px);
+            background: rgba(229, 9, 20, 0.2);
+        }
+
+        .timeline-date {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-date .year {
+            color: #e50914;
+        }
+
+        .timeline-title {
+            font-size: 1rem;
+            opacity: 0.7;
+            margin-bottom: 1rem;
+        }
+
+        .platform-logos {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .platform-logo {
+            width: 30px;
+            height: 20px;
+            background: #555;
+            border-radius: 3px;
+        }
+
+        /* Suits Section */
+        .suits-section {
+            padding: 5rem 5%;
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+
+        .suits-content {
+            flex: 1;
+        }
+
+        .suits-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #e50914;
+        }
+
+        .suits-description {
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .suit-image {
+            width: 300px;
+            height: 350px;
+            background: linear-gradient(135deg, #e50914, #666);
+            border-radius: 10px;
+            position: relative;
+            overflow: visible;
+        }
+
+        .suit-image::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 6rem;
+            opacity: 0.6;
+        }
+
+        .suit-preview{
+            position: relative;
+            width: 50%;
+            transform: scale3d(1.2, 1.2, 1.2);
+        }
+
+        /* Villains Section */
+        .villains-section {
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 3rem;
+            color: #e50914;
+        }
+
+        .section-title::before {
+            content: '• ';
+        }
+
+        .villains-carousel {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+            position: relative;
+        }
+
+        .carousel-arrow {
+            width: 50px;
+            height: 50px;
+            background: rgba(229, 9, 20, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-arrow:hover {
+            background: #e50914;
+            transform: scale(1.1);
+        }
+
+        .carousel-arrow.left::before {
+            content: '‹';
+            font-size: 1.5rem;
+            margin-right: 2px;
+        }
+
+        .carousel-arrow.right::before {
+            content: '›';
+            font-size: 1.5rem;
+            margin-left: 2px;
+        }
+
+        .villain-cards {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .villain-card {
+            width: 200px;
+            height: 280px;
+            background: linear-gradient(135deg, #333, #555);
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .villain-card-active{
+            width: 200px;
+            height: 300px;
+            background: linear-gradient(135deg, #333, #555);
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .villain-card:hover {
+            transform: scale(1.05);
+        }
+
+        .villain-card-active:hover {
+            transform: scale(1.05);
+        }
+
+        .villain-card-active {
+            border: 3px solid #e50914;
+        }
+
+        .villain-name {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .villain-preview{
+            width: 100%;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            height: 200px;
+            background: linear-gradient(135deg, #333, #666);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            opacity: 0.5;
+        }
+
+        .gallery-image{
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            padding: 3rem 5%;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #e50914;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-nav a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: #e50914;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .social-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 1rem 0;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: #333;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .dot:hover, .dot.active {
+            background: #e50914;
+        }
+
+        .spider-decoration {
+            position: absolute;
+            right: 50px;
+            bottom: 50px;
+            font-size: 4rem;
+            opacity: 0.3;
+            color: #e50914;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .character-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .character-image {
+                width: 300px;
+                height: 450px;
+            }
+
+            .timeline-section {
+                flex-direction: column;
+            }
+
+            .suits-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .villain-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes webSwing {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        .hero::after {
+            content: '🕸️';
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            font-size: 2rem;
+            opacity: 0.3;
+            animation: webSwing 4s ease-in-out infinite;
+        }
+
+        @keyframes spiderCrawl {
+            0% { transform: translateX(-20px); }
+            50% { transform: translateX(20px); }
+            100% { transform: translateX(-20px); }
+        }
+
+        .spider-decoration {
+            animation: spiderCrawl 6s ease-in-out infinite;
+        }
